@@ -1,0 +1,8 @@
+n=imread('nicework.tif');
+imshow(n)
+sq=ones(3,3);
+nb=n&~imerode(n,sq);
+figure,imshow(nb)
+nf=regfill(nb,[74,52],sq);
+figure,imshow(nf)
+figure,imshow(nb|nf)
